@@ -7,7 +7,7 @@ services:
     environment:
       - MCP_TRANSPORT=${MCP_TRANSPORT:-http}
       - DOKPLOY_URL=${DOKPLOY_URL}
-      - DOKPLOY_AUTH_TOKEN=${DOKPLOY_AUTH_TOKEN}
+      - DOKPLOY_API_KEY=${DOKPLOY_API_KEY}
     restart: unless-stopped
     networks:
       - mcp-network
@@ -17,7 +17,7 @@ services:
     container_name: dokploy-mcp-stdio
     environment:
       - DOKPLOY_URL=${DOKPLOY_URL}
-      - DOKPLOY_AUTH_TOKEN=${DOKPLOY_AUTH_TOKEN}
+      - DOKPLOY_API_KEY=${DOKPLOY_API_KEY}
     restart: "no"
     stdin_open: true
     tty: true
